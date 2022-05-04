@@ -20,11 +20,15 @@
           },
           extend: {
             colors: {
-              primary: '#FF5733',
-              secondary: '#FFFC33',
+              primary: '#ff5733',
+              secondary: '#fffc33',
             },
             spacing: {
               5: '3.5rem',
+              128: '32rem',
+            },
+            borderRadius: {
+              '4xl': '2rem',
             },
           },
         },
@@ -33,25 +37,21 @@
 
     <title>Customization</title>
   </head>
-  <!-- Tailwind is mobile-first -->
-  <body
-    class="bg-black sm:bg-green-800 md:bg-primary lg:bg-yellow-800 xl:bg-purple-800 2xl:bg-orange-800"
+ <body
+    class="bg-black sm:bg-green-800 md:bg-blue-800 lg:bg-yellow-800 xl:bg-purple-800 2xl:bg-orange-800"
   >
-    <div class="bg-black p-5">
-      <h1 class="text-white text-xl md:text-3xl md:text-secondary xl:text-5xl">
-        Tailwind is awesome
-      </h1>
+    <div class="m-5 mb-128 bg-gray-800 p-4 rounded-4xl">
+      <h1 class="text-primary text-xl"></h1>
+      <p class="text-secondary">Tailwind is Awesome</p>
     </div>
 
     <script>
       function showBrowserWidth() {
-        const width =
-          window.innerWidth ||
-          document.documentElement.clientWidth ||
-          document.body.clientWidth
+        const width = window.innerWidth
 
         document.querySelector('h1').innerHTML = `Width: ${width}`
       }
+
       window.onload = showBrowserWidth
       window.onresize = showBrowserWidth
     </script>
